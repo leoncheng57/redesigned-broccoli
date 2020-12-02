@@ -1,0 +1,19 @@
+{
+  "name": "redesigned-broccoli",
+  "version": "1.0.0",
+  "description": "New Personal Website ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoncheng57/redesigned-broccoli.git"
+  },
+  "author": "Leon Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leoncheng57/redesigned-broccoli/issues"
+  },
+  "homepage": "https://github.com/leoncheng57/redesigned-broccoli#readme"
+}
