@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "./Navbar";
+
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
-
 import {lightTheme, darkTheme} from "../themes/colors";
 
 const MyButton = styled.button`
@@ -9,9 +10,10 @@ const MyButton = styled.button`
     color: ${props => props.theme.textColor};
 `;
 
-const App = () => {
+export default function(){
     return (
         <div>
+            <Navbar/>
             <ThemeProvider theme={darkTheme}>
                 <MyButton>
                     Something something what the 
@@ -26,5 +28,3 @@ const App = () => {
         </div>
     )
 }
-
-export default App;
