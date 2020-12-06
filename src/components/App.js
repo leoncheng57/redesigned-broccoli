@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "./Navbar";
 
 import "../index.css";
 
-import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import {lightTheme, darkTheme} from "../themes/colors";
 
 const MyButton = styled.button`
@@ -13,9 +12,11 @@ const MyButton = styled.button`
 `;
 
 export default function(){
+    const [currentTheme, setCurrentTheme] = useState(darkTheme)
+
     return (
         <div>
-            <Navbar/>
+            <Navbar theme={currentTheme}/>
             <hr/>
             <ThemeProvider theme={darkTheme}>
                 <MyButton>
