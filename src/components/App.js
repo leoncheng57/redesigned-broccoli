@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 
+import "../index.css";
+
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import {lightTheme, darkTheme} from "../themes/colors";

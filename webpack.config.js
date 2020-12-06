@@ -9,12 +9,17 @@ const js = {
     }
 }
 
+const css = {
+    test: /\.css$/i,
+    use: ["style-loader", "css-loader"],
+}
+
 module.exports = {
     entry: { 
         index: path.resolve(__dirname, "src", "index.js") 
     },
     module: {
-        rules: [js]
+        rules: [js, css]
     },
     plugins: [
         new HtmlWebpackPlugin({
