@@ -9,8 +9,6 @@ const js = {
     }
 }
 
-
-
 module.exports = {
     entry: { 
         index: path.resolve(__dirname, "src", "index.js") 
@@ -28,7 +26,6 @@ module.exports = {
         filename: '[name].js'
     },
     devServer: {
-        port: 3000,
-        watchContentBase: true,
+        port: 3000
     }
 }
