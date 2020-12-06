@@ -6,17 +6,26 @@ import TogglePill from "./TogglePill";
 const NavbarContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
 `;
 
-
+const NameBox = styled.div`
+    background-color: ${props => props.theme.textColor};
+    color: ${props => props.theme.backgroundPrimary};
+    font-weight: 900;
+    padding: 5px;
+`;
 
 export default function(props) {
     return (
         <ThemeProvider theme={props.theme}>
             <NavbarContainer>
-                <div>
+                <NameBox>
                     LEON CHENG
-                </div>
+                </NameBox>
                 <GithubIcon fill={props.theme.textColor}/>
                 <LinkedInIcon fill={props.theme.textColor}/>
                 <MailIcon fill={props.theme.textColor}/>
