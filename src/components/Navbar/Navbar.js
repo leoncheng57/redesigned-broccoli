@@ -16,7 +16,9 @@ const NameBox = styled.div`
     background-color: ${props => props.theme.textColor};
     color: ${props => props.theme.backgroundPrimary};
     font-weight: 900;
-    padding: 5px;
+    padding: 5px 10px;
+    margin: 0 20px;
+    font: normal normal bold 23px/28px Chivo;
 `;
 
 export default function(props) {
