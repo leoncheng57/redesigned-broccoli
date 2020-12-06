@@ -14,12 +14,25 @@ const css = {
     use: ["style-loader", "css-loader"],
 }
 
+const imgs = {
+    test: /\.(png|jpe?g|gif|svg)$/,
+    use: [
+        {
+            loader: "file-loader",
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'images'
+            }
+        }
+    ]
+}
+
 module.exports = {
     entry: { 
         index: path.resolve(__dirname, "src", "index.js") 
     },
     module: {
-        rules: [js, css]
+        rules: [js, css, imgs]
     },
     plugins: [
         new HtmlWebpackPlugin({

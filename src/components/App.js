@@ -16,6 +16,7 @@ export default function(){
     return (
         <div>
             <Navbar/>
+            <hr/>
             <ThemeProvider theme={darkTheme}>
                 <MyButton>
                     Something something what the 
