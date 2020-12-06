@@ -1,28 +1,14 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "./SocialIcons";
+import TogglePill from "./TogglePill";
 
 const NavbarContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
 `;
 
-const ToggleContainer = styled.div`
-    background-color: ${props => props.theme.highlight};
-    width: 39px;
-    height: 24px;
-    border-radius: 99px;
-    display: flex;
-    align-items: center;
-`;
 
-const ToggleCircle = styled.div`
-    background-color: ${props => props.theme.backgroundPrimary};
-    width: 15px;
-    height: 15px;
-    border-radius: 99px;
-    margin: 0 5px;
-`;
 
 export default function(props) {
     return (
@@ -42,10 +28,8 @@ export default function(props) {
                 Languages
                 Work
 
-                <MoonIcon fill={props.theme.textColor}/>
-                <ToggleContainer>
-                    <ToggleCircle/>
-                </ToggleContainer>
+                <MoonIcon fill={props.theme.highlight}/>
+                <TogglePill/>
             </NavbarContainer>
         </ThemeProvider>
     )
