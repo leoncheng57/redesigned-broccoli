@@ -12,4 +12,8 @@ const MailIcon = ({fill}) => {
     return <svg xmlns="http://www.w3.org/2000/svg" width="33.091" height="28" viewBox="0 0 33.091 28" fill={fill}><path d="M31.782,4H5.309A3.405,3.405,0,0,0,2.017,7.5L2,28.5A3.419,3.419,0,0,0,5.309,32H31.782a3.419,3.419,0,0,0,3.309-3.5V7.5A3.419,3.419,0,0,0,31.782,4Zm0,7L18.545,19.75,5.309,11V7.5l13.236,8.75L31.782,7.5Z" transform="translate(-2 -4)"/></svg>
 }
 
-export {GithubIcon, LinkedInIcon, MailIcon}
+const MoonIcon = ({fill}) => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="28.97" height="30" viewBox="0 0 28.97 30" fill={fill}><path d="M32.683,24.285A15.051,15.051,0,1,1,17,3.5.879.879,0,0,1,17.9,4a.862.862,0,0,1-.158,1,11.358,11.358,0,0,0-3.358,8.176A11.552,11.552,0,0,0,31.452,23.23a.861.861,0,0,1,1.231,1.055Z" transform="translate(-3.761 -3.496)"/></svg>
+}
+
+export {GithubIcon, LinkedInIcon, MailIcon, MoonIcon}

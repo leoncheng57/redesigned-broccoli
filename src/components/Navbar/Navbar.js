@@ -1,10 +1,11 @@
 import React from "react";
-
 import styled, { ThemeProvider } from "styled-components";
+import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "./SocialIcons";
 
-import {GithubIcon, LinkedInIcon, MailIcon} from "./SocialIcons";
-
-const NavbarContainer = styled.div``;
+const NavbarContainer = styled.div`
+    background-color: ${props => props.theme.backgroundPrimary};
+    color: ${props => props.theme.textColor};
+`;
 
 export default function(props) {
     return (
@@ -13,12 +14,20 @@ export default function(props) {
                 <div>
                     LEON CHENG
                 </div>
-                <GithubIcon fill="orange"/>
-                <LinkedInIcon fill="orange"/>
-                <MailIcon fill="orange"/>
+                <GithubIcon fill={props.theme.textColor}/>
+                <LinkedInIcon fill={props.theme.textColor}/>
+                <MailIcon fill={props.theme.textColor}/>
                 leonc@mit.edu
-            </NavbarContainer>
 
+                Top 
+                Education
+                Projects
+                Languages
+                Work
+
+                <MoonIcon fill={props.theme.textColor}/>
+                (Toggle)
+            </NavbarContainer>
         </ThemeProvider>
     )
 }
