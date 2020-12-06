@@ -7,6 +7,23 @@ const NavbarContainer = styled.div`
     color: ${props => props.theme.textColor};
 `;
 
+const ToggleContainer = styled.div`
+    background-color: ${props => props.theme.highlight};
+    width: 39px;
+    height: 24px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+`;
+
+const ToggleCircle = styled.div`
+    background-color: ${props => props.theme.backgroundPrimary};
+    width: 15px;
+    height: 15px;
+    border-radius: 99px;
+    margin: 0 5px;
+`;
+
 export default function(props) {
     return (
         <ThemeProvider theme={props.theme}>
@@ -26,7 +43,9 @@ export default function(props) {
                 Work
 
                 <MoonIcon fill={props.theme.textColor}/>
-                (Toggle)
+                <ToggleContainer>
+                    <ToggleCircle/>
+                </ToggleContainer>
             </NavbarContainer>
         </ThemeProvider>
     )
