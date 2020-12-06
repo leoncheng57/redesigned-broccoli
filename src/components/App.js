@@ -5,7 +5,7 @@ import styled from "styled-components";
 import {lightTheme, darkTheme} from "../themes/colors";
 
 const MyButton = styled.button`
-    background-color: ${props => props.theme.background};
+    background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
 `;
 
