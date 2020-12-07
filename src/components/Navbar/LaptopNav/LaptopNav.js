@@ -41,8 +41,6 @@ const LeftItems = styled.div`
 
 `;
 
-
-
 const RightItems = styled.div`
     display: flex;
     flex-direction: row;

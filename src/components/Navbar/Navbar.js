@@ -1,6 +1,14 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import LaptopNav from "./LaptopNav/LaptopNav";
+import MobileNav from "./MobileNav/MobileNav";
+
+const MobileOnly = styled.div`
+    display: block;
+    @media ${props => props.theme.device.laptop} {
+        display: none;
+    }
+`;
 
 const LaptopOnly = styled.div`
     display: none;
@@ -16,8 +24,11 @@ export default function(props) {
             <LaptopOnly>
                 <LaptopNav theme={props.theme}/>
             </LaptopOnly>
-            <div>Mobile Nav</div>
-            <div>Mobile Menu</div>
+            <MobileOnly>
+                <MobileNav theme={props.theme}/>
+                <div>Mobile Nav</div>
+                <div>Mobile Menu</div>
+            </MobileOnly>
         </ThemeProvider>
     )
 }
