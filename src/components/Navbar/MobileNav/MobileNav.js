@@ -21,16 +21,27 @@ const MobileNavContainer = styled.div`
     }
 
     #Hamburger {
+        .patty {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 7px 0;
+        }
     }
-
-
+    #Hamburger:active {
+        opacity: 0.4;
+    }
 `;
 
 export default (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <MobileNavContainer>
-                <div id="Hamburger">Ham</div>
+                <div id="Hamburger">
+                    <div className="patty"></div>                    
+                    <div className="patty"></div>                    
+                    <div className="patty"></div>                    
+                </div>
                 <div id="NameBox">
                     LEON CHENG
                 </div>
