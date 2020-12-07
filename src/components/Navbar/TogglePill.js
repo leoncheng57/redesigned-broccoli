@@ -8,6 +8,7 @@ const ToggleContainer = styled.div`
     border-radius: 99px;
     display: flex;
     align-items: center;
+    margin: 0 5px;
 `;
 
 const ToggleCircle = styled.div`

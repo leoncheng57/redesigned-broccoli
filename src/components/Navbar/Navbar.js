@@ -19,20 +19,22 @@ const LeftItems = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0 20px;
 
     #NameBox {
         background-color: ${props => props.theme.textColor};
         color: ${props => props.theme.backgroundPrimary};
         font-weight: 900;
         padding: 5px 10px;
-        margin: 0 20px;
+        margin-right: 20px;
         font: normal normal bold 23px/28px Chivo;
+        text-align: center;
     }
 
-    svg {
+    a {
         margin: 0 7px;
     }
-    svg:hover {
+    a:hover {
         opacity: 0.6;
         cursor: pointer;
     }
@@ -46,6 +48,20 @@ const RightItems = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0 20px;
+
+    p {
+        margin: 0 20px;
+        font: normal normal normal 20px/29px Overpass;
+    }
+    p:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    svg {
+        margin: 0 7px;
+    }
 `;
 
 
@@ -58,9 +74,15 @@ export default function(props) {
                     <div id="NameBox">
                         LEON CHENG
                     </div>
-                    <GithubIcon fill={props.theme.textColor}/>
-                    <LinkedInIcon fill={props.theme.textColor}/>
-                    <MailIcon fill={props.theme.textColor}/>
+                    <a href="#">
+                        <GithubIcon fill={props.theme.textColor}/>
+                    </a>
+                    <a href="#">
+                        <LinkedInIcon fill={props.theme.textColor}/>
+                    </a>
+                    <a href="#">
+                        <MailIcon fill={props.theme.textColor}/>
+                    </a>
                     <MyEmail/>
                 </LeftItems>
                 <RightItems>
