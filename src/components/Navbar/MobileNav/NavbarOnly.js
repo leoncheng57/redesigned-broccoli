@@ -37,7 +37,7 @@ export default (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <NavbarOnlyContainer>
-                <div id="Hamburger">
+                <div id="Hamburger" onClick={() => {props.openMenu()}}>
                     <div className="patty"></div>                    
                     <div className="patty"></div>                    
                     <div className="patty"></div>                    
