@@ -2,6 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "./SocialIcons";
 import TogglePill from "./TogglePill";
+import MyEmail from "./MyEmail";
 
 const NavbarContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
@@ -36,10 +37,6 @@ const LeftItems = styled.div`
         cursor: pointer;
     }
 
-    p {
-        font: normal normal normal 16px/23px Overpass;
-        cursor: pointer;
-    }
 `;
 
 
@@ -54,21 +51,6 @@ const RightItems = styled.div`
 
 
 export default function(props) {
-
-    const myEmail = "leonc@mit.edu";
-
-    // Set up an invisible input element so that Click to Copy can work
-    const clickToCopy = () => {
-        const body = document.getElementsByTagName('body')[0];
-        const invisibleInput = document.createElement("input");
-        invisibleInput.setAttribute('value', myEmail);
-        body.appendChild(invisibleInput);
-        invisibleInput.select();
-        document.execCommand("copy");
-        body.removeChild(invisibleInput);
-    }
-
-
     return (
         <ThemeProvider theme={props.theme}>
             <NavbarContainer>
@@ -79,9 +61,7 @@ export default function(props) {
                     <GithubIcon fill={props.theme.textColor}/>
                     <LinkedInIcon fill={props.theme.textColor}/>
                     <MailIcon fill={props.theme.textColor}/>
-                    <p id="myEmail" onClick={clickToCopy}>
-                        {myEmail}
-                    </p>
+                    <MyEmail/>
                 </LeftItems>
                 <RightItems>
                     <p>Top</p> 
