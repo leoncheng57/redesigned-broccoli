@@ -4,6 +4,9 @@ import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "./SocialIcons";
 import TogglePill from "./TogglePill";
 import MyEmail from "./MyEmail";
 
+import {device} from "../../breakpoints/breakpoints";
+
+
 const NavbarContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
@@ -12,6 +15,10 @@ const NavbarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 80px;
+
+    @media ${device.laptop} {
+        background-color: red;
+    }
 `;
 
 const LeftItems = styled.div`
