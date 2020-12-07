@@ -26,8 +26,6 @@ export default function(props) {
             </LaptopOnly>
             <MobileOnly>
                 <MobileNav theme={props.theme}/>
-                <div>Mobile Nav</div>
-                <div>Mobile Menu</div>
             </MobileOnly>
         </ThemeProvider>
     )
