@@ -2,6 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 const MenuContainer = styled.div`
+    display: ${props => props.menuIsOpen ? "block" : "none"};
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
 `;
@@ -10,8 +11,7 @@ const MenuContainer = styled.div`
 export default (props) => {
     return (
         <ThemeProvider theme={props.theme}>
-            <MenuContainer>
-                <div onClick={() => {props.closeMenu()}}> X </div>
+            <MenuContainer menuIsOpen={props.menuIsOpen}>
                 <div>LEON CHENG</div>
                 <div>MoonIcon</div>
                 <div> --- </div>
