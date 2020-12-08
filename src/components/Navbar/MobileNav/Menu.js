@@ -5,6 +5,8 @@ const MenuContainer = styled.div`
     display: ${props => props.menuIsOpen ? "block" : "none"};
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
+    border: none;
+    margin: 0;
 `;
 
 

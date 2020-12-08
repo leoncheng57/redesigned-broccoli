@@ -7,9 +7,12 @@ const TopContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
     color: ${props => props.theme.textColor};
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 20px 0;
+    height: 80px;
+    border: none;
+    margin: 0;
 
     #NameBox {
         background-color: ${props => props.theme.textColor};
