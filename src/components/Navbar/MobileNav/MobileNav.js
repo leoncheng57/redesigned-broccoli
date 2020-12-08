@@ -5,14 +5,13 @@ import NavbarOnly from "./NavbarOnly";
 import Menu from "./Menu";
 
 const NavbarOnlyWrapper = styled.div`
-    /* display: ${props => props.showMenu ? "none" : "block"}; */
     opacity: ${props => props.showMenu ? "0" : "1"};
     transition: opacity 0.7s;
 `;
 
 const MenuWrapper = styled.div`
-    /* display: ${props => props.showMenu ? "block" : "none"}; */
-    opacity: ${props => props.showMenu ? "1" : "0"};
+    /* opacity: ${props => props.showMenu ? "1" : "0"}; */
+    opacity: 1;
     transition: opacity 0.7s;
 `;
 

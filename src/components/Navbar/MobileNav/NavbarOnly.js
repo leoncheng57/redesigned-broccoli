@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import {MoonIcon} from "../SocialIcons";
+import {MoonIcon, CloseIcon} from "../SocialIcons";
 
 const NavbarOnlyContainer = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
@@ -42,6 +42,7 @@ export default (props) => {
                     <div className="patty"></div>                    
                     <div className="patty"></div>                    
                 </div>
+                <CloseIcon fill={props.theme.textColor}/>
                 <div id="NameBox">
                     LEON CHENG
                 </div>
