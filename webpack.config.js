@@ -9,17 +9,35 @@ const js = {
     }
 }
 
+const css = {
+    test: /\.css$/i,
+    use: ["style-loader", "css-loader"],
+}
+
+const imgs = {
+    test: /\.(png|jpe?g|gif|svg)$/,
+    use: [
+        {
+            loader: "file-loader",
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'images'
+            }
+        }
+    ]
+}
+
 module.exports = {
     entry: { 
         index: path.resolve(__dirname, "src", "index.js") 
     },
     module: {
-        rules: [js]
+        rules: [js, css, imgs]
     },
     plugins: [
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, "src", "index.html")
-        })
+        }),
     ],
     output: {
         path: path.resolve(__dirname, 'docs'),

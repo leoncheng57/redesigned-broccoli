@@ -1,7 +1,9 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
+import React, {useState} from "react";
+import {Navbar} from "./navbar/_navbar";
 
+import "../index.css";
+
+import styled, { ThemeProvider } from "styled-components";
 import {lightTheme, darkTheme} from "../themes/colors";
 
 const MyButton = styled.button`
@@ -9,9 +11,13 @@ const MyButton = styled.button`
     color: ${props => props.theme.textColor};
 `;
 
-const App = () => {
+export default function(){
+    const [currentTheme, setCurrentTheme] = useState(darkTheme)
+
     return (
         <div>
+            <Navbar theme={currentTheme}/>
+            <hr/>
             <ThemeProvider theme={darkTheme}>
                 <MyButton>
                     Something something what the 
@@ -26,5 +32,3 @@ const App = () => {
         </div>
     )
 }
-
-export default App;
