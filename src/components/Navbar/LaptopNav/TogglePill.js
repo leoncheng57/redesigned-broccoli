@@ -9,20 +9,24 @@ const ToggleContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 0 5px;
+    position: relative;
 `;
 
-const ToggleCircle = styled.div`
+const Circle = styled.div`
     background-color: ${props => props.theme.backgroundPrimary};
     width: 15px;
     height: 15px;
     border-radius: 99px;
-    margin: 0 5px;
+    position: absolute;
+    left: ${props => props.theme.themeName === "dark" ? `5px` : `19px`};
 `;
 
 export const TogglePill = (props) => {
     return (
-        <ToggleContainer>
-            <ToggleCircle/>
-        </ToggleContainer>
+        <ThemeProvider theme={props.theme}>
+            <ToggleContainer onClick={() => props.toggleTheme()}>
+                <Circle/>
+            </ToggleContainer>
+        </ThemeProvider>
     )
 }
