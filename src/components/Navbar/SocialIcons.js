@@ -26,7 +26,11 @@ export const CloseIcon = ({fill}) => {
             <path d="M0,0H43V43H0Z" style={bgStyle}/>
             <path d="M30.083,7.526,27.556,5,17.541,15.015,7.526,5,5,7.526,15.015,17.541,5,27.556l2.526,2.526L17.541,20.067,27.556,30.083l2.526-2.526L20.067,17.541Z" transform="translate(3.958 3.958)"/>
         </svg>
-    ) 
-
-    
+    )     
 }
+
+export const HamburgerIcon = ({fill}) => 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path fill={fill} d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>

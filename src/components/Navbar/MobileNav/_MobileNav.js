@@ -21,7 +21,8 @@ export default (props) => {
                 theme={props.theme}
                 menuIsOpen={menuIsOpen}
                 openMenu={openMenu}
-                closeMenu={closeMenu}    
+                closeMenu={closeMenu}   
+                toggleTheme={props.toggleTheme}
             />
             <Menu 
                 theme={props.theme}

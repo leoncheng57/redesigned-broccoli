@@ -22,10 +22,16 @@ export const Navbar = (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <LaptopOnly>
-                <LaptopNav theme={props.theme}/>
+                <LaptopNav 
+                    theme={props.theme}
+                    toggleTheme={props.toggleTheme}
+                />
             </LaptopOnly>
             <MobileOnly>
-                <MobileNav theme={props.theme}/>
+                <MobileNav 
+                    theme={props.theme}
+                    toggleTheme={props.toggleTheme}
+                />
             </MobileOnly>
         </ThemeProvider>
     )

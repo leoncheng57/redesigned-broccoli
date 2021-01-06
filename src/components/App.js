@@ -12,11 +12,15 @@ const MyButton = styled.button`
 `;
 
 export default function(){
-    const [currentTheme, setCurrentTheme] = useState(darkTheme)
+    const [currentTheme, setCurrentTheme] = useState(darkTheme);
+
+    const toggleTheme = () => {
+        currentTheme === darkTheme ? setCurrentTheme(lightTheme) : setCurrentTheme(darkTheme); 
+    }
 
     return (
         <div>
-            <Navbar theme={currentTheme}/>
+            <Navbar theme={currentTheme} toggleTheme={toggleTheme}/>
 
             <hr/>
             <hr/>
