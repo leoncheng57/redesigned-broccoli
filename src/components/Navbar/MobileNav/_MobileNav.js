@@ -5,7 +5,7 @@ import {Top} from "./top";
 import {Menu} from "./menu";
 
 export default (props) => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const [menuIsOpen, setMenuIsOpen] = useState(true);
 
     const openMenu = () => {
         setMenuIsOpen(true);
