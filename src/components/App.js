@@ -17,18 +17,17 @@ export default function(){
     return (
         <div>
             <Navbar theme={currentTheme}/>
+
             <hr/>
-            <ThemeProvider theme={darkTheme}>
-                <MyButton>
-                    Something something what the 
-                </MyButton>
-            </ThemeProvider>
-            <br/>
-            <ThemeProvider theme={lightTheme}>
-                <MyButton>
-                    Another one
-                </MyButton>
-            </ThemeProvider>
+            <hr/>
+            <button onClick={()=> {
+                currentTheme === darkTheme ? setCurrentTheme(lightTheme) : setCurrentTheme(darkTheme); 
+            }}>
+                Click
+            </button>
+            <hr/>
+            <hr/>
+            <hr/>
         </div>
     )
 }
