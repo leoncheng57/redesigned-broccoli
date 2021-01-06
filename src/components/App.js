@@ -12,23 +12,26 @@ const MyButton = styled.button`
 `;
 
 export default function(){
-    const [currentTheme, setCurrentTheme] = useState(darkTheme)
+    const [currentTheme, setCurrentTheme] = useState(darkTheme);
+
+    const toggleTheme = () => {
+        currentTheme === darkTheme ? setCurrentTheme(lightTheme) : setCurrentTheme(darkTheme); 
+    }
 
     return (
         <div>
-            <Navbar theme={currentTheme}/>
+            <Navbar theme={currentTheme} toggleTheme={toggleTheme}/>
+
             <hr/>
-            <ThemeProvider theme={darkTheme}>
-                <MyButton>
-                    Something something what the 
-                </MyButton>
-            </ThemeProvider>
-            <br/>
-            <ThemeProvider theme={lightTheme}>
-                <MyButton>
-                    Another one
-                </MyButton>
-            </ThemeProvider>
+            <hr/>
+            <button onClick={()=> {
+                currentTheme === darkTheme ? setCurrentTheme(lightTheme) : setCurrentTheme(darkTheme); 
+            }}>
+                Click
+            </button>
+            <hr/>
+            <hr/>
+            <hr/>
         </div>
     )
 }

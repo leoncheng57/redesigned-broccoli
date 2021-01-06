@@ -106,7 +106,10 @@ export default (props) => {
                         <p>Work</p>
                     </a>
                     <MoonIcon fill={props.theme.highlight}/>
-                    <TogglePill/>
+                    <TogglePill 
+                        theme={props.theme}
+                        toggleTheme={props.toggleTheme}
+                    />
                 </RightItems>
             </LaptopNavContainer>
         </ThemeProvider>

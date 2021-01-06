@@ -6,6 +6,7 @@ export const darkTheme = {
     textColor: "#FFFFFF",
     highlight: "#8DF7F7",
     device: device,
+    themeName: "dark",
 }
 
 export const lightTheme = {
@@ -14,4 +15,5 @@ export const lightTheme = {
     textColor: "#000000",
     highlight: "#1692DA",
     device: device,
+    themeName: "light",
 };

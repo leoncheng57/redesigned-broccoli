@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import {MoonIcon, CloseIcon} from "../socialicons";
+import {MoonIcon, CloseIcon, HamburgerIcon} from "../socialicons";
 
 const TopContainer = styled.div`
     display: flex;
@@ -12,7 +12,7 @@ const TopContainer = styled.div`
     padding: 20px 0;
     height: 80px;
     border: none;
-    margin: 0;
+    margin: 0;  
 
     #NameBox {
         background-color: ${props => props.theme.textColor};
@@ -35,11 +35,8 @@ const TopContainer = styled.div`
             /* opacity: ${props => props.menuIsOpen ? "0" : "1"};
             transition: opacity 0.7s; */
 
-            .patty {
-                width: 35px;
-                height: 5px;
-                background-color: white;
-                margin: 7px 0;
+            svg {
+                width: 100%;
             }
         }
         #Close {
@@ -63,9 +60,7 @@ export const Top = (props) => {
             <TopContainer menuIsOpen={props.menuIsOpen}>
                 <div id="Hamburger">
                     <div id="Open" onClick={() => {props.openMenu()}}>
-                        <div className="patty"></div>                    
-                        <div className="patty"></div>                    
-                        <div className="patty"></div>                    
+                        <HamburgerIcon fill={props.theme.textColor}/>
                     </div>
 
                     <div id="Close" onClick={() => props.closeMenu()}>
@@ -75,7 +70,10 @@ export const Top = (props) => {
                 <div id="NameBox">
                     LEON CHENG
                 </div>
-                <div id="MoonContainer">
+                <div 
+                    id="MoonContainer"
+                    onClick={() => {props.toggleTheme()}}
+                >
                     <MoonIcon fill={props.theme.highlight}/>
                 </div>
             </TopContainer>

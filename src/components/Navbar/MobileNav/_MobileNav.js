@@ -5,7 +5,7 @@ import {Top} from "./top";
 import {Menu} from "./menu";
 
 export default (props) => {
-    const [menuIsOpen, setMenuIsOpen] = useState(true);
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
     const openMenu = () => {
         setMenuIsOpen(true);
@@ -21,7 +21,8 @@ export default (props) => {
                 theme={props.theme}
                 menuIsOpen={menuIsOpen}
                 openMenu={openMenu}
-                closeMenu={closeMenu}    
+                closeMenu={closeMenu}   
+                toggleTheme={props.toggleTheme}
             />
             <Menu 
                 theme={props.theme}

@@ -24,8 +24,8 @@ const MenuContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        border-top: 1px solid ${props => props.theme.textColor};
+        border-bottom: 1px solid ${props => props.theme.textColor};
 
         .IconsContainer {
             display: flex;
@@ -38,6 +38,7 @@ const MenuContainer = styled.div`
             font: normal normal normal 16px/23px Overpass;
             margin: 0;
             padding-top: 20px; 
+            color: ${props => props.theme.textColor};
         }
     }
 
@@ -45,7 +46,7 @@ const MenuContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        font: bold normal normal 24px/23px Overpass;
+        font: normal normal normal 24px/28px Overpass;
 
         a {
             padding: 20px 0;
@@ -62,9 +63,9 @@ export const Menu =  (props) => {
             <MenuContainer menuIsOpen={props.menuIsOpen}>                    
                 <div className="IconsAndEmail">
                     <div className="IconsContainer"> 
-                        <GithubIcon fill="white"/>
-                        <LinkedInIcon fill="white"/>
-                        <MailIcon fill="white"/>
+                        <GithubIcon fill={props.theme.textColor}/>
+                        <LinkedInIcon fill={props.theme.textColor}/>
+                        <MailIcon fill={props.theme.textColor}/>
                     </div>
                     <p className="EmailContainer">leonc@mit.edu</p>
                 </div>
