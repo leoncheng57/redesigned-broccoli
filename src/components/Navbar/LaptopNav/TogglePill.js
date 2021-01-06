@@ -19,7 +19,7 @@ const ToggleCircle = styled.div`
     margin: 0 5px;
 `;
 
-export default function(props) {
+export const TogglePill = (props) => {
     return (
         <ToggleContainer>
             <ToggleCircle/>

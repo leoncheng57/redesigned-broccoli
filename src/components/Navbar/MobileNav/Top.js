@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import {MoonIcon, CloseIcon} from "../SocialIcons";
+import {MoonIcon, CloseIcon} from "../socialicons";
 
 const TopContainer = styled.div`
     display: flex;
@@ -57,7 +57,7 @@ const TopContainer = styled.div`
     }
 `;
 
-export default (props) => {
+export const Top = (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <TopContainer menuIsOpen={props.menuIsOpen}>

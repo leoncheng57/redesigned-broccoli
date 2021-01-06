@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import Top from "./Top";
-import Menu from "./Menu";
+import {Top} from "./top";
+import {Menu} from "./menu";
 
 export default (props) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);

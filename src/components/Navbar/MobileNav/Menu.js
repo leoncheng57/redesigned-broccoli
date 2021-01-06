@@ -10,7 +10,7 @@ const MenuContainer = styled.div`
 `;
 
 
-export default (props) => {
+export const Menu =  (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <MenuContainer menuIsOpen={props.menuIsOpen}>

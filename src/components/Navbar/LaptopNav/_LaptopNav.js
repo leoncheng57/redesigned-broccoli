@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "../SocialIcons";
-import TogglePill from "./TogglePill";
-import MyEmail from "./MyEmail";
+import {GithubIcon, LinkedInIcon, MailIcon, MoonIcon} from "../socialicons";
+import {TogglePill} from "./togglepill";
+import {MyEmail} from "./myemail";
 
 const LaptopNavContainer = styled.div`
     width: 100%;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import LaptopNav from "./LaptopNav/LaptopNav";
-import MobileNav from "./MobileNav/MobileNav";
+import LaptopNav from "./laptopnav/_laptopnav";
+import MobileNav from "./mobilenav/_mobilenav";
 
 const MobileOnly = styled.div`
     display: block;
@@ -18,7 +18,7 @@ const LaptopOnly = styled.div`
     }
 `;
 
-export default function(props) {
+export const Navbar = (props) => {
     return (
         <ThemeProvider theme={props.theme}>
             <LaptopOnly>

@@ -53,7 +53,7 @@ const MyEmailContainer = styled.div`
 `;
 
 
-export default function(props) {
+export const MyEmail = (props) => {
     const [tooltipText, setTooltipText] = useState("Copy to clipboard");
 
     const myEmail = "leonc@mit.edu";
